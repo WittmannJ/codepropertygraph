@@ -2,7 +2,7 @@ package io.shiftleft.passes.namespacecreator
 
 import gremlin.scala._
 import io.shiftleft.codepropertygraph.generated.{EdgeKeyNames, EdgeTypes, NodeKeys, NodeTypes}
-import io.shiftleft.passes.namspacecreator.NamespaceCreator
+import io.shiftleft.passes.namespacecreator.NamespaceCreator
 import org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraph
 import org.scalatest.{Matchers, WordSpec}
 
@@ -21,7 +21,7 @@ class NamespaceCreatorTests extends WordSpec with Matchers {
     namespaces.size shouldBe 2
     namespaces.map(_.value2(NodeKeys.NAME)).toSet shouldBe Set("namespace1", "namespace2")
 
-    val namspaceBlocks = graph.V().hasLabel(NodeTypes.NAMESPACE).in(EdgeTypes.REF).toSet
-    namspaceBlocks shouldBe Set(block1, block2, block3)
+    val namespaceBlocks = graph.V().hasLabel(NodeTypes.NAMESPACE).in(EdgeTypes.REF).toSet
+    namespaceBlocks shouldBe Set(block1, block2, block3)
   }
 }

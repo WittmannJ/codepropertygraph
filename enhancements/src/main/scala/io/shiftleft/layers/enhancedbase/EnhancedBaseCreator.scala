@@ -6,7 +6,7 @@ import io.shiftleft.passes.linking.capturinglinker.CapturingLinker
 import io.shiftleft.passes.linking.linker.Linker
 import io.shiftleft.passes.linking.memberaccesslinker.MemberAccessLinker
 import io.shiftleft.passes.methoddecorations.MethodDecoratorPass
-import io.shiftleft.passes.namspacecreator.NamespaceCreator
+import io.shiftleft.passes.namespacecreator.NamespaceCreator
 
 class EnhancedBaseCreator(graph: ScalaGraph, language: String) {
 
